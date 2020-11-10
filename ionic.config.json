@@ -1,0 +1,7 @@
+{
+  "name": "vuetest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

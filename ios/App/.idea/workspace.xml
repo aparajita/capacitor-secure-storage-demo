@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2cbba9c6-e448-4631-b6b8-464889000701" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-20x20@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-20x20@2x-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-20x20@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-20x20@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-29x29@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-29x29@2x-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-29x29@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-29x29@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-40x40@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-40x40@2x-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-40x40@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-40x40@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-60x60@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-60x60@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-76x76@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-76x76@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/AppIcon-83.5x83.5@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/Logo.imageset/App logo@1x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/Logo.imageset/App logo@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/Logo.imageset/App logo@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/Logo.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/foo.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/foo.imageset/splash-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/foo.imageset/splash-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Assets.xcassets/foo.imageset/splash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/SplashAnimation.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/App/Test.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../capacitor.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../capacitor.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/components/ExploreContainer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/components/ExploreContainer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/views/Tab1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/views/Tab1.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/views/Tab2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/views/Tab2.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/views/Tab3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/views/Tab3.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../src/views/Tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../src/views/Tabs.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_A0CA0DA4-1719-4566-9B3D-9D755690EC60" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1jUNwrbBdWBM987LNRzzevvDf08" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="CocoaPods" />
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="App" TARGET_NAME="App" CONFIG_NAME="Debug" SCHEME_NAME="App" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="App" RUN_TARGET_NAME="App" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2cbba9c6-e448-4631-b6b8-464889000701" name="Default Changelist" comment="" />
+      <created>1603854953731</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603854953731</updated>
+      <workItem from="1603854955307" duration="779000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

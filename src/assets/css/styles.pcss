@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 17px;
+  }
+
+  h1 {
+    @apply font-bold text-xl;
+  }
+}
+
+@layer components {
+  html.plt-mobileweb ion-button {
+    --border-radius: theme('borderRadius.lg');
+    --padding-top: theme('spacing.2');
+    --padding-bottom: theme('spacing.2');
+    height: unset; /* No need for fixed height on the web */
+    @apply tracking-normal;
+  }
+
+  ion-input {
+    --padding-top: theme('padding.1') !important;
+    --padding-bottom: theme('padding.1') !important;
+  }
+
+  /* Don't highlight focused items */
+  ion-item {
+    --background-focused-opacity: 0;
+  }
+
+  /* Don't let labels grow or shrink */
+  ion-label {
+    @apply flex-none;
+  }
+
+  /* On Android, there is no gap between a checkbox and the label. Fix that. */
+  ion-checkbox.md + ion-label {
+    @apply ml-1;
+  }
+
+  ion-select {
+    @apply w-fit;
+  }
+}
+
+@layer utilities {
+  .ion-color-step-400 {
+    color: var(--ion-color-step-400);
+  }
+
+  .ion-border-color-step-400 {
+    border-color: var(--ion-color-step-400);
+  }
+}

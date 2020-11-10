@@ -1,0 +1,30 @@
+{
+  "appId": "com.aparajita.capacitor.securestorage",
+  "appName": "Storage",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist",
+  "hideLogs": false,
+  "backgroundColor": "#ffffff",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    },
+    "WSLogger": {
+      "hide": false,
+      "prefixes": {
+        "info": "😃",
+        "warn": "😱",
+        "error": "☠️"
+      }
+    },
+    "WSSplashScreen": {
+      "source": "*",
+      "backgroundColor": "#ffffff",
+      "android": {
+        "fullscreen": false
+      }
+    }
+  },
+  "cordova": {}
+}
