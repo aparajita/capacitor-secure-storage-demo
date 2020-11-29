@@ -7,23 +7,11 @@
   "hideLogs": false,
   "backgroundColor": "#ffffff",
   "plugins": {
+    "Keyboard": {
+      "resize": "ionic"
+    },
     "SplashScreen": {
       "launchShowDuration": 0
-    },
-    "WSLogger": {
-      "hide": false,
-      "prefixes": {
-        "info": "😃",
-        "warn": "😱",
-        "error": "☠️"
-      }
-    },
-    "WSSplashScreen": {
-      "source": "*",
-      "backgroundColor": "#ffffff",
-      "android": {
-        "fullscreen": false
-      }
     }
   },
   "cordova": {}
