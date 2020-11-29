@@ -7,14 +7,13 @@
     </ion-header>
 
     <ion-content
-      :scroll-y="false"
-      class="ion-padding"
+      :scroll-y="true"
     >
-      <div class="flex flex-col justify-start items-center w-full h-full pt-2 space-y-4">
+      <div class="flex flex-col justify-start items-center w-full ion-padding-top pr-5 space-y-4">
         <ion-item
           v-if="!Capacitor.isNative"
+          lines="inset"
           class="w-full"
-          lines="none"
         >
           <ion-label position="stacked">
             Storage
@@ -35,26 +34,43 @@
           </ion-select>
         </ion-item>
 
-        <ion-item class="w-full">
-          <ion-label position="stacked">
-            Prefix
-          </ion-label>
-          <div class="flex w-full">
+        <div class="flex items-end w-full">
+          <ion-item
+            lines="inset"
+            class="w-full"
+          >
+            <ion-label position="stacked">
+              Prefix
+            </ion-label>
+
             <ion-input
               v-model="prefix"
               type="text"
               class="flex-1"
             />
-            <ion-button
-              class="flex-initial ml-2"
-              @click="onSetPrefix"
-            >
-              Set
-            </ion-button>
-          </div>
-        </ion-item>
+          </ion-item>
 
-        <ion-item class="w-full">
+          <ion-button
+            size="small"
+            class="flex-initial"
+            @click="onSetPrefix"
+          >
+            Set
+          </ion-button>
+          <ion-button
+            size="small"
+            class="flex-initial ml-1"
+            @click="onShowKeys"
+          >
+            Keys
+          </ion-button>
+        </div>
+
+
+        <ion-item
+          lines="inset"
+          class="w-full"
+        >
           <ion-label position="stacked">
             Key
           </ion-label>
@@ -66,32 +82,35 @@
         </ion-item>
 
         <ion-item
-          lines="none"
+          lines="inset"
           class="w-full"
         >
           <ion-label position="stacked">
-            Data {{ dataType }}
+            Data {{ dataType ? `(${dataType})` : '' }}
           </ion-label>
-          <ion-textarea
+          <ion-input
             v-model="data"
-            class="bordered px-2"
             required
+            @ionChange="onDataChanged"
           />
         </ion-item>
+      </div>
+      <div class="flex justify-center items-center w-full mt-6 space-x-4">
+        <ion-button @click="onSet">
+          Set
+        </ion-button>
 
-        <div class="flex space-x-6">
-          <ion-button @click="onStore">
-            Set
-          </ion-button>
+        <ion-button @click="onGet">
+          Get
+        </ion-button>
 
-          <ion-button @click="onRetrieve">
-            Get
-          </ion-button>
+        <ion-button @click="onRemove">
+          Rm
+        </ion-button>
 
-          <ion-button @click="onClear">
-            Clear
-          </ion-button>
-        </div>
+        <ion-button @click="onClear">
+          Clear
+        </ion-button>
       </div>
     </ion-content>
   </ion-page>
@@ -109,22 +128,22 @@ import {
   IonPage,
   IonSelect,
   IonSelectOption,
-  IonTextarea,
   IonTitle,
   IonToolbar
 } from '@ionic/vue'
 import { Capacitor, Plugins } from '@capacitor/core'
 import {
+  DataType,
   StorageError,
   StorageType,
   WSSecureStoragePlugin
 } from 'ws-capacitor-secure-storage'
-import { onBeforeMount, ref, watch } from 'vue'
+import { defineComponent, onBeforeMount, ref, watch } from 'vue'
 
 let storage: WSSecureStoragePlugin
 
-export default {
-  name: 'Default',
+export default defineComponent({
+  name: 'Home',
 
   components: {
     IonButton,
@@ -136,7 +155,6 @@ export default {
     IonPage,
     IonSelect,
     IonSelectOption,
-    IonTextarea,
     IonTitle,
     IonToolbar
   },
@@ -159,74 +177,185 @@ export default {
     /*
      * lifecycle
      */
-    onBeforeMount(async () => {
-      let key = process?.env?.WS_SECURE_STORAGE_KEY
-
-      if (!key) {
-        console.warn(
-          'The encryption key should be set by the environment variable WS_SECURE_STORAGE_KEY or by calling'
-        )
-        key = 'This is just a placeholder'
-      }
-
+    onBeforeMount(() => {
       storage = Plugins.WSSecureStorage as WSSecureStoragePlugin
-      storage.setEncryptionKey(key)
-      prefix.value = storage.getStoragePrefix()
+      prefix.value = storage.keyPrefix
+
+      // This stuff pertains only to the web
+      if (!Capacitor.isNative) {
+        let key = process?.env?.WS_SECURE_STORAGE_KEY
+
+        if (!key) {
+          console.warn(
+            'The encryption key should be set by the environment variable WS_SECURE_STORAGE_KEY or by calling setEncryptionKey()'
+          )
+          key = 'This is just a placeholder'
+        }
+
+        storage.setEncryptionKey(key)
+      }
     })
 
     /*
      * methods
      */
     function onChangeStorageType() {
-      storage.setStorageType(
+      storage.storageType =
         storageType.value === 'sessionStorage'
           ? StorageType.sessionStorage
           : StorageType.localStorage
-      )
     }
 
-    async function onStore() {
+    function onDataChanged(event: CustomEvent) {
       try {
-        await storage.store({
-          key: key.value,
-          data: data.value
-        })
-
-        await showAlert(`Data stored successfully.`)
-        data.value = ''
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const [_, type] = parseValue(event.detail.value)
+        dataType.value = type
       } catch (e) {
-        console.log(e)
+        dataType.value = ''
+      }
+    }
+
+    async function onSet() {
+      try {
+        const [value, type] = parseValue(data.value)
+        await storage.set(key.value, value)
+        await showAlert(`Item (${type}) stored successfully.`)
+        data.value = ''
+        dataType.value = ''
+      } catch (e) {
         await showErrorAlert(e)
       }
     }
 
-    async function onRetrieve() {
+    function parseValue(value: string): [DataType, string] {
+      if (!value) {
+        throw new SyntaxError('Empty data value')
+      }
+
+      if (/^\d{4}-\d{2}-\d{2}/.test(value)) {
+        const date = new Date(value)
+
+        // If the format is not a valid date, the properties will be NaN
+        if (!Number.isNaN(date.getFullYear())) {
+          return [date, 'date']
+        }
+      }
+
+      const parsed = JSON.parse(value)
+      let type: string = typeof parsed
+
+      if (type === 'object') {
+        if (parsed === null) {
+          type = 'null'
+        } else if (Array.isArray(parsed)) {
+          type = 'array'
+        }
+      }
+
+      return [parsed, type]
+    }
+
+    function getDataType(value: DataType) {
+      let type = typeof value
+
+      if (type === 'object') {
+        if (value === null) {
+          return 'null'
+        }
+
+        if (value instanceof Date) {
+          return 'date'
+        }
+
+        if (Array.isArray(value)) {
+          return 'array'
+        }
+
+        return 'object'
+      }
+
+      return type
+    }
+
+    async function onGet() {
       try {
-        const { data: result } = await storage.retrieve({ key: key.value })
-        data.value = result
+        const value = await storage.get(key.value)
+
+        if (value instanceof Date) {
+          data.value = value.toISOString()
+        } else {
+          data.value = JSON.stringify(value)
+        }
+
+        dataType.value = getDataType(value)
+      } catch (e) {
+        data.value = ''
+        await showErrorAlert(e)
+      }
+    }
+
+    async function onRemove() {
+      try {
+        const success = await storage.remove(key.value)
+
+        if (success) {
+          await showAlert(`Item for key "${key.value}" removed successfully.`)
+        } else {
+          await showAlert(`There is no item with the key "${key.value}".`)
+        }
       } catch (e) {
         await showErrorAlert(e)
+      } finally {
+        data.value = ''
       }
     }
 
     async function onClear() {
       try {
-        const { success } = await storage.clear({ key: key.value })
-
-        if (success) {
-          await showAlert(`Data for key "${key.value}" cleared successfully.`)
-          data.value = ''
-        } else {
-          await showAlert(`There is no data with the key "${key.value}".`)
-        }
+        await storage.clear()
+        key.value = ''
+        await showAlert(`All items with prefix '${storage.keyPrefix}' removed.`)
       } catch (e) {
         await showErrorAlert(e)
+      } finally {
+        data.value = ''
       }
     }
 
-    function onSetPrefix() {
-      storage.setKeyPrefix({ prefix: prefix.value })
-      showAlert(`Prefix set to "${prefix.value}".`)
+    async function onSetPrefix() {
+      storage.keyPrefix = prefix.value
+      await showAlert(`Prefix set to "${prefix.value}".`)
+    }
+
+    async function onShowKeys() {
+      const keys = await storage.keys()
+      keys.sort()
+
+      let qty: string
+
+      switch (keys.length) {
+        case 0:
+          qty = 'are no'
+          break
+
+        case 1:
+          qty = 'is 1'
+          break
+
+        default:
+          qty = `are ${keys.length}`
+      }
+
+      let msg = `There ${qty} key${
+        keys.length === 1 ? '' : 's'
+      } with the prefix '${prefix.value}'.`
+
+      if (keys.length > 0) {
+        msg += '<br><br>' + keys.join('<br>')
+      }
+
+      await showAlert(msg)
     }
 
     function isStorageError(error: Error): error is StorageError {
@@ -234,7 +363,7 @@ export default {
       return error?.hasOwnProperty('code')
     }
 
-    async function showErrorAlert(error: Error) {
+    async function showErrorAlert(error: Error | StorageError) {
       let message = error.message
 
       if (isStorageError(error)) {
@@ -259,21 +388,16 @@ export default {
       data,
       dataType,
       key,
-      onChangeStorageType,
       onClear,
-      onRetrieve,
+      onDataChanged,
+      onRemove,
+      onGet,
       onSetPrefix,
-      onStore,
+      onSet,
+      onShowKeys,
       prefix,
       storageType
     }
   }
-}
+})
 </script>
-
-<style scoped>
-ion-textarea.bordered {
-  border-width: 1px;
-  border-color: var(--ion-color-step-250, #c8c7cc);
-}
-</style>
