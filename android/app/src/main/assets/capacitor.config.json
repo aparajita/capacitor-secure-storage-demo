@@ -1,0 +1,18 @@
+{
+  "appId": "com.aparajita.capacitor.securestorage",
+  "appName": "Storage",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist",
+  "hideLogs": false,
+  "backgroundColor": "#ffffff",
+  "plugins": {
+    "Keyboard": {
+      "resize": "ionic"
+    },
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
