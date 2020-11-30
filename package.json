@@ -20,13 +20,13 @@
     "core-js": "^3.8.0",
     "ionicons": "^5.2.3",
     "vue": "^3.0.3",
-    "vue-router": "^4.0.0-rc.5",
-    "ws-capacitor-secure-storage": "^1.0.0"
+    "vue-router": "^4.0.0-rc.6",
+    "ws-capacitor-secure-storage": "^1.0.1"
   },
   "devDependencies": {
     "@capacitor/cli": "2.4.3",
-    "@typescript-eslint/eslint-plugin": "^4.8.2",
-    "@typescript-eslint/parser": "^4.8.2",
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
     "@vue/cli-plugin-babel": "~4.5.9",
     "@vue/cli-plugin-router": "~4.5.9",
     "@vue/cli-plugin-typescript": "~4.5.9",

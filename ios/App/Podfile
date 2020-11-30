@@ -10,7 +10,7 @@ def capacitor_pods
   # Automatic Capacitor Pod dependencies, do not delete
   pod 'Capacitor', :path => '../../node_modules/.pnpm/@capacitor/ios@2.4.3_@capacitor+core@2.4.3/node_modules/@capacitor/ios'
   pod 'CapacitorCordova', :path => '../../node_modules/.pnpm/@capacitor/ios@2.4.3_@capacitor+core@2.4.3/node_modules/@capacitor/ios'
-  pod 'WsCapacitorSecureStorage', :path => '../../node_modules/.pnpm/ws-capacitor-secure-storage@1.0.0/node_modules/ws-capacitor-secure-storage'
+  pod 'WsCapacitorSecureStorage', :path => '../../node_modules/.pnpm/ws-capacitor-secure-storage@1.0.1/node_modules/ws-capacitor-secure-storage'
   # Do not delete
 end
 
