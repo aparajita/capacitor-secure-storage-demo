@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/aparajita/ws-capacitor-secure-storage-demo/compare/v1.0.1...v1.0.2) (2020-12-01)
+
+
+### Features
+
+* add usage to the README ([5c9818b](https://github.com/aparajita/ws-capacitor-secure-storage-demo/commit/5c9818b3afa36f5f3b296bc02abb3bb8210485e1))
+
 ## 1.0.0 (2020-11-29)
 
 
