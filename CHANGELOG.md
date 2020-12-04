@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://github.com/aparajita/ws-capacitor-secure-storage-demo/compare/v1.0.3...v1.0.4) (2020-12-04)
+
+
+### Style
+
+* better launch screen on iOS ([71775ec](https://github.com/aparajita/ws-capacitor-secure-storage-demo/commit/71775ecacd59a7f98498be4fdf417f0f08c184bf))
+* tweak look and behavior on native ([8b6d0e1](https://github.com/aparajita/ws-capacitor-secure-storage-demo/commit/8b6d0e1fc0ee9e6051200f384a9ac0a49f71e4a5))
+
+
+### Maintenance
+
+* cap sync ([770b7eb](https://github.com/aparajita/ws-capacitor-secure-storage-demo/commit/770b7eb8748bda22010f0cdf6ecc9d7866c38dc7))
+* configure standard-version ([e035bcd](https://github.com/aparajita/ws-capacitor-secure-storage-demo/commit/e035bcdcf2b0cb48287f6bbd65db9427541d9b68))
+
 ### [1.0.3](https://github.com/aparajita/ws-capacitor-secure-storage-demo/compare/v1.0.2...v1.0.3) (2020-12-04)
 
 * Update dependencies, upgrade to Tailwind 2.
