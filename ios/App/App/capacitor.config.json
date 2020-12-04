@@ -5,10 +5,9 @@
   "npmClient": "npm",
   "webDir": "dist",
   "hideLogs": false,
-  "backgroundColor": "#ffffff",
   "plugins": {
     "Keyboard": {
-      "resize": "ionic"
+      "resize": "none"
     },
     "SplashScreen": {
       "launchShowDuration": 0
