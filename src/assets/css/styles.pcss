@@ -9,19 +9,20 @@
       since Tailwind units are rem-based.
      */
     font-size: 17px;
-
-    /* Tailwind uses 1.5 as the default, 1.15 is the Ionic default. */
-    line-height: 1.15;
   }
 }
 
 @layer components {
+  ion-button {
+    /* Standard Ionic tracking on buttons is too tight for my taste */
+    @apply tracking-normal;
+  }
+
   html.plt-mobileweb ion-button {
     --border-radius: theme('borderRadius.lg');
     --padding-top: theme('spacing.2');
     --padding-bottom: theme('spacing.2');
     height: unset; /* No need for fixed height on the web */
-    @apply tracking-normal;
   }
 
   /* Don't highlight items */
