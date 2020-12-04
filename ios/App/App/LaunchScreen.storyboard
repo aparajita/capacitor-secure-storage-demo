@@ -17,16 +17,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oej-Xt-t9d">
-                                <rect key="frame" x="0.0" y="175" width="320" height="41"/>
+                                <rect key="frame" x="0.0" y="175" width="320" height="64.5"/>
                                 <string key="text">Secure storage
 for Capacitor</string>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Oej-Xt-t9d" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="5hh-pp-R56"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="Oej-Xt-t9d" secondAttribute="trailing" id="66p-sp-XBD"/>
