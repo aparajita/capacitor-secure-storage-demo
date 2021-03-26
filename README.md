@@ -1,13 +1,13 @@
-# ws-capacitor-secure-storage demo
+# capacitor-secure-storage demo
 
-This Ionic/Vue app demonstrates all of the features of the [ws-capacitor-secure-storage plugin](https://github.com/aparajita/ws-capacitor-secure-storage).
+This Ionic/Vue app demonstrates all of the features of the [capacitor-secure-storage plugin](https://github.com/aparajita/capacitor-secure-storage).
 
 ## Installation
 
 First clone the repo locally:
 
 ```shell
-git clone https://github.com/aparajita/ws-capacitor-secure-storage-demo
+git clone https://github.com/aparajita/capacitor-secure-storage-demo
 ```
 
 Install dependencies:

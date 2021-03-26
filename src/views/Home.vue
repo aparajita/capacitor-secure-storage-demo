@@ -137,7 +137,7 @@ import {
   StorageError,
   StorageType,
   WSSecureStoragePlugin
-} from 'ws-capacitor-secure-storage'
+} from '@aparajita/capacitor-secure-storage'
 import { defineComponent, onBeforeMount, ref, watch } from 'vue'
 
 let storage: WSSecureStoragePlugin
