@@ -1,5 +1,5 @@
 dependencies:
-  '@aparajita/capacitor-secure-storage': 1.0.5
+  '@aparajita/capacitor-secure-storage': 1.0.6
   '@capacitor/android': 2.4.7_@capacitor+core@2.4.7
   '@capacitor/core': 2.4.7
   '@capacitor/ios': 2.4.7_@capacitor+core@2.4.7
@@ -43,7 +43,7 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Zci0V1MN0npvH7lBEQhCh5HTTr6VKKXej4+utaCB0E1Rb51RnjSOAYwjfFWF7OLNuc1eYcxcN8j5rfkyG3YpqA==
-  /@aparajita/capacitor-secure-storage/1.0.5:
+  /@aparajita/capacitor-secure-storage/1.0.6:
     dependencies:
       '@aparajita/capacitor-native-decorator': 1.1.1
       '@capacitor/android': 2.4.7_@capacitor+core@2.4.7
@@ -55,7 +55,7 @@ packages:
     peerDependencies:
       standard-version: ^9.1.1
     resolution:
-      integrity: sha512-nrG3tC/aSQhmxkTk5lF56y+5pKVI8lIotQsNjIUswq6pjt3koKzqzNNI87jzCSECj/5s/dCi6gzV2reXTlp3DQ==
+      integrity: sha512-HZQRRf8uWsg1Nu2Djoaz1cv2NxQC/C4riyU1UE03xA7JoTb+rHgUZ+ZfPd4fWY6ucIJCMCimvKxWIWeT0buJpg==
   /@babel/code-frame/7.12.11:
     dependencies:
       '@babel/highlight': 7.13.10
@@ -10248,7 +10248,7 @@ packages:
     resolution:
       integrity: sha512-jcKpkthap6x63MB4TxwCyuIGkV0oYP/YRyuQU5UO0Yz/E/ZAu+653/uov+phdmO54n6BcvFRyyt0RRrWdN2mpw==
 specifiers:
-  '@aparajita/capacitor-secure-storage': ^1.0.5
+  '@aparajita/capacitor-secure-storage': ^1.0.6
   '@capacitor/android': ^2.4.7
   '@capacitor/cli': 2.4.7
   '@capacitor/core': 2.4.7

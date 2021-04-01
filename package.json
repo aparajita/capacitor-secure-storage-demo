@@ -10,7 +10,7 @@
     "android": "ionic cap run android -l --external"
   },
   "dependencies": {
-    "@aparajita/capacitor-secure-storage": "^1.0.5",
+    "@aparajita/capacitor-secure-storage": "^1.0.6",
     "@capacitor/android": "^2.4.7",
     "@capacitor/core": "2.4.7",
     "@capacitor/ios": "^2.4.7",
