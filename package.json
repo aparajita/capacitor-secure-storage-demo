@@ -1,6 +1,7 @@
 {
   "name": "@aparajita/capacitor-secure-storage-demo",
   "version": "1.0.5",
+  "description": "An Ionic/Capacitor project that demos the features of the @aparajita/capacitor-secure-storage Capacitor plugin",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -9,7 +10,7 @@
     "android": "ionic cap run android -l --external"
   },
   "dependencies": {
-    "@aparajita/capacitor-secure-storage": "^1.0.4",
+    "@aparajita/capacitor-secure-storage": "^1.0.5",
     "@capacitor/android": "^2.4.7",
     "@capacitor/core": "2.4.7",
     "@capacitor/ios": "^2.4.7",
@@ -17,24 +18,24 @@
     "@ionic/pwa-elements": "^3.0.2",
     "@ionic/vue": "5.6.3",
     "@ionic/vue-router": "5.6.3",
-    "@types/node": "^14.14.36",
-    "core-js": "^3.9.1",
+    "@types/node": "^14.14.37",
+    "core-js": "^3.10.0",
     "ionicons": "^5.5.1",
     "vue": "^3.0.7",
     "vue-router": "^4.0.5"
   },
   "devDependencies": {
     "@capacitor/cli": "2.4.7",
-    "@typescript-eslint/eslint-plugin": "^4.19.0",
-    "@typescript-eslint/parser": "^4.19.0",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
     "@vue/cli-plugin-babel": "~4.5.12",
     "@vue/cli-plugin-router": "~4.5.12",
     "@vue/cli-plugin-typescript": "~4.5.12",
     "@vue/cli-service": "~4.5.12",
-    "@vue/compiler-sfc": "^3.0.7",
+    "@vue/compiler-sfc": "^3.0.10",
     "@vue/eslint-config-typescript": "^7.0.0",
     "autoprefixer": "^9",
-    "eslint": "^7.22.0",
+    "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier-vue": "^3.0.0-alpha.2",
     "eslint-plugin-vue": "^7.8.0",
@@ -45,6 +46,5 @@
     "typescript": "~4.2.3",
     "vue-eslint-parser": "^7.6.0",
     "vue-loader": "^15.9.6"
-  },
-  "description": "An Ionic project"
+  }
 }
