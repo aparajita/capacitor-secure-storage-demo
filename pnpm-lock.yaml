@@ -1,5 +1,5 @@
 dependencies:
-  '@aparajita/capacitor-secure-storage': 1.0.6
+  '@aparajita/capacitor-secure-storage': 1.0.7
   '@capacitor/android': 2.4.7_@capacitor+core@2.4.7
   '@capacitor/core': 2.4.7
   '@capacitor/ios': 2.4.7_@capacitor+core@2.4.7
@@ -18,9 +18,9 @@ devDependencies:
   '@typescript-eslint/parser': 4.20.0_eslint@7.23.0+typescript@4.2.3
   '@vue/cli-plugin-babel': 4.5.12_6af64733a7e512307207decf90053a76
   '@vue/cli-plugin-router': 4.5.12_@vue+cli-service@4.5.12
-  '@vue/cli-plugin-typescript': 4.5.12_f54b27c69ca4a9536ba04c430a132dfb
-  '@vue/cli-service': 4.5.12_62c30f0742fef4fa62d1863a1329cc3d
-  '@vue/compiler-sfc': 3.0.10_vue@3.0.7
+  '@vue/cli-plugin-typescript': 4.5.12_cf80ef12528a1b6be80ee62db412c68c
+  '@vue/cli-service': 4.5.12_57a3c46a367b16ae6c43ae54a4197806
+  '@vue/compiler-sfc': 3.0.11_vue@3.0.7
   '@vue/eslint-config-typescript': 7.0.0_cd749861b051dcd4c7feb8570842898e
   autoprefixer: 9.8.6
   eslint: 7.23.0
@@ -43,7 +43,7 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Zci0V1MN0npvH7lBEQhCh5HTTr6VKKXej4+utaCB0E1Rb51RnjSOAYwjfFWF7OLNuc1eYcxcN8j5rfkyG3YpqA==
-  /@aparajita/capacitor-secure-storage/1.0.6:
+  /@aparajita/capacitor-secure-storage/1.0.7:
     dependencies:
       '@aparajita/capacitor-native-decorator': 1.1.1
       '@capacitor/android': 2.4.7_@capacitor+core@2.4.7
@@ -55,7 +55,7 @@ packages:
     peerDependencies:
       standard-version: ^9.1.1
     resolution:
-      integrity: sha512-HZQRRf8uWsg1Nu2Djoaz1cv2NxQC/C4riyU1UE03xA7JoTb+rHgUZ+ZfPd4fWY6ucIJCMCimvKxWIWeT0buJpg==
+      integrity: sha512-v7NGa/GzEVGE/Q95fmrjGcLjFtNtv9yp0CNCCKF13Ypaq/3bF74i6pJuENQzzq3zDPixxh6+W1ddIrFAHOdBKQ==
   /@babel/code-frame/7.12.11:
     dependencies:
       '@babel/highlight': 7.13.10
@@ -1674,7 +1674,7 @@ packages:
     dependencies:
       '@babel/core': 7.12.3
       '@vue/babel-preset-app': 4.5.12_vue@3.0.7
-      '@vue/cli-service': 4.5.12_62c30f0742fef4fa62d1863a1329cc3d
+      '@vue/cli-service': 4.5.12_57a3c46a367b16ae6c43ae54a4197806
       '@vue/cli-shared-utils': 4.5.12
       babel-loader: 8.1.0_427212bc1158d185e577033f19ca0757
       cache-loader: 4.1.0_webpack@4.44.2
@@ -1688,19 +1688,19 @@ packages:
       integrity: sha512-PhiNDhlGydsRR0F00OJqG/Q3Mz2G1ko8XqS7CJ0l1GVVGmklUEBy2dW/S8ntEgHpSkFa6h49PgYP3WE2OM3CEg==
   /@vue/cli-plugin-router/4.5.12_@vue+cli-service@4.5.12:
     dependencies:
-      '@vue/cli-service': 4.5.12_62c30f0742fef4fa62d1863a1329cc3d
+      '@vue/cli-service': 4.5.12_57a3c46a367b16ae6c43ae54a4197806
       '@vue/cli-shared-utils': 4.5.12
     dev: true
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0-0
     resolution:
       integrity: sha512-DYNz5AA3W7Ewt3aaiOLGdYFt4MX4w/HTEtep+kPzP9S9tAknzyoIJXkaYzhwu8ArpEYwhWgtuCcDZ8hR6++DbA==
-  /@vue/cli-plugin-typescript/4.5.12_f54b27c69ca4a9536ba04c430a132dfb:
+  /@vue/cli-plugin-typescript/4.5.12_cf80ef12528a1b6be80ee62db412c68c:
     dependencies:
       '@types/webpack-env': 1.15.3
-      '@vue/cli-service': 4.5.12_62c30f0742fef4fa62d1863a1329cc3d
+      '@vue/cli-service': 4.5.12_57a3c46a367b16ae6c43ae54a4197806
       '@vue/cli-shared-utils': 4.5.12
-      '@vue/compiler-sfc': 3.0.10_vue@3.0.7
+      '@vue/compiler-sfc': 3.0.11_vue@3.0.7
       cache-loader: 4.1.0_webpack@4.44.2
       fork-ts-checker-webpack-plugin: 3.1.1
       globby: 9.2.0
@@ -1724,13 +1724,13 @@ packages:
       integrity: sha512-ZTsmvaLHa/DBhqXfgiGkfJfz3tGUAWkRJiAkEAGJnj6X2pj7P47x9et/dkxPej/eVyxrSCtQs7Xt3bT9cMKJ3w==
   /@vue/cli-plugin-vuex/4.5.12_@vue+cli-service@4.5.12:
     dependencies:
-      '@vue/cli-service': 4.5.12_62c30f0742fef4fa62d1863a1329cc3d
+      '@vue/cli-service': 4.5.12_57a3c46a367b16ae6c43ae54a4197806
     dev: true
     peerDependencies:
       '@vue/cli-service': ^3.0.0 || ^4.0.0-0
     resolution:
       integrity: sha512-STgbvNv/3iHAKArc18b/qjN7RX1FTrfxPeHH26GOr/A8lJes7+CSluZZ8E5R7Zr/vL0zOqOkUVDAjFXVf4zWQA==
-  /@vue/cli-service/4.5.12_62c30f0742fef4fa62d1863a1329cc3d:
+  /@vue/cli-service/4.5.12_57a3c46a367b16ae6c43ae54a4197806:
     dependencies:
       '@intervolga/optimize-cssnano-plugin': 1.0.6_webpack@4.44.2
       '@soda/friendly-errors-webpack-plugin': 1.7.1_webpack@4.44.2
@@ -1742,7 +1742,7 @@ packages:
       '@vue/cli-plugin-router': 4.5.12_@vue+cli-service@4.5.12
       '@vue/cli-plugin-vuex': 4.5.12_@vue+cli-service@4.5.12
       '@vue/cli-shared-utils': 4.5.12
-      '@vue/compiler-sfc': 3.0.10_vue@3.0.7
+      '@vue/compiler-sfc': 3.0.11_vue@3.0.7
       '@vue/component-compiler-utils': 3.2.0
       '@vue/preload-webpack-plugin': 1.1.2_e19cda6b5f21e6c518504c22be752ae4
       '@vue/web-component-wrapper': 1.2.0
@@ -1847,16 +1847,16 @@ packages:
     dev: true
     resolution:
       integrity: sha512-dNz5AObEYg0Oglw3emIsBhTAOVfObrfxDaAzR0UTRDDq+Ohfr6KTSaVQAH88Ym+oa08ZlLZBFc6ARe9doAOIxg==
-  /@vue/compiler-core/3.0.10:
+  /@vue/compiler-core/3.0.11:
     dependencies:
       '@babel/parser': 7.13.13
       '@babel/types': 7.13.14
-      '@vue/shared': 3.0.10
+      '@vue/shared': 3.0.11
       estree-walker: 2.0.1
       source-map: 0.6.1
     dev: true
     resolution:
-      integrity: sha512-rayD+aODgX9CWgWv0cAI+whPLyMmtkWfNGsZpdpsaIloh8mY2hX8+SvE1Nn3755YhGWJ/7oaDEcNpOctGwZbsA==
+      integrity: sha512-6sFj6TBac1y2cWCvYCA8YzHJEbsVkX7zdRs/3yK/n1ilvRqcn983XvpBbnN3v4mZ1UiQycTvOiajJmOgN9EVgw==
   /@vue/compiler-core/3.0.7:
     dependencies:
       '@babel/parser': 7.12.5
@@ -1874,13 +1874,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-z8n+R1GhFnWuKURLYxfVSEfP7nSNM91qteobxwys55fhlZZuReouMnUwgrn+ois/IL6RdFlT9H+n4+N6yLrdJA==
-  /@vue/compiler-dom/3.0.10:
+  /@vue/compiler-dom/3.0.11:
     dependencies:
-      '@vue/compiler-core': 3.0.10
-      '@vue/shared': 3.0.10
+      '@vue/compiler-core': 3.0.11
+      '@vue/shared': 3.0.11
     dev: true
     resolution:
-      integrity: sha512-SzN1li9xAxtqkZimR1AFU2t1N0vzsAJxR/5764xoS0xedwhUU9s8s+Tks2FNMLsXiqdkP2Qd4zAM+9EwTbZmRw==
+      integrity: sha512-+3xB50uGeY5Fv9eMKVJs2WSRULfgwaTJsy23OIltKgMrynnIj8hTYY2UL97HCoz78aDw1VDXdrBQ4qepWjnQcw==
   /@vue/compiler-dom/3.0.7:
     dependencies:
       '@vue/compiler-core': 3.0.7
@@ -1912,14 +1912,14 @@ packages:
       vue: 3.0.0-rc.5
     resolution:
       integrity: sha512-huoIFEfFCJxHcpoByAUQti7CIwJdHPLJXKuy2HG7J1B+IEKugtBdF50CLH35ZD8dWM0nyOMFFqTbO7i6CCjL3Q==
-  /@vue/compiler-sfc/3.0.10_vue@3.0.7:
+  /@vue/compiler-sfc/3.0.11_vue@3.0.7:
     dependencies:
       '@babel/parser': 7.13.13
       '@babel/types': 7.13.14
-      '@vue/compiler-core': 3.0.10
-      '@vue/compiler-dom': 3.0.10
-      '@vue/compiler-ssr': 3.0.10
-      '@vue/shared': 3.0.10
+      '@vue/compiler-core': 3.0.11
+      '@vue/compiler-dom': 3.0.11
+      '@vue/compiler-ssr': 3.0.11
+      '@vue/shared': 3.0.11
       consolidate: 0.16.0
       estree-walker: 2.0.1
       hash-sum: 2.0.0
@@ -1933,9 +1933,9 @@ packages:
       vue: 3.0.7
     dev: true
     peerDependencies:
-      vue: 3.0.10
+      vue: 3.0.11
     resolution:
-      integrity: sha512-LLbXHwKMM72aomKsj9AySkLP1xIHREh/3w0nueenKhsWuaKTL1/XUhIPml23+Z+tX55qeJiUIHDeJuFSxfgQfg==
+      integrity: sha512-7fNiZuCecRleiyVGUWNa6pn8fB2fnuJU+3AGjbjl7r1P5wBivfl02H4pG+2aJP5gh2u+0wXov1W38tfWOphsXw==
   /@vue/compiler-ssr/3.0.0-rc.5:
     dependencies:
       '@vue/compiler-dom': 3.0.0-rc.5
@@ -1943,13 +1943,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-OU5Vl2+bCDMImS9OeCVnl4lfxZ3/sopdwX2SrUWVKQvCxmmmlyWvoVkC6nNGCs/MrOmIMhKmL6etgzLTWyCkUg==
-  /@vue/compiler-ssr/3.0.10:
+  /@vue/compiler-ssr/3.0.11:
     dependencies:
-      '@vue/compiler-dom': 3.0.10
-      '@vue/shared': 3.0.10
+      '@vue/compiler-dom': 3.0.11
+      '@vue/shared': 3.0.11
     dev: true
     resolution:
-      integrity: sha512-skrPSp9pjZG3unqHpUaEaRRpO1yYxbCXRfJ1kZW8PTGAg5g3Y/hrUet5+Q6zCIZwr5j1mSMBSLXMDCjFuyyZLg==
+      integrity: sha512-66yUGI8SGOpNvOcrQybRIhl2M03PJ+OrDPm78i7tvVln86MHTKhM3ERbALK26F7tXl0RkjX4sZpucCpiKs3MnA==
   /@vue/component-compiler-utils/3.2.0:
     dependencies:
       consolidate: 0.15.1
@@ -2019,10 +2019,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ZhcgGzBpp+pUzisZgQpM4ctIGgLpYjBj7/rZfbhEPxFHF/BuTV2jmhXvAl8aF9xDAejIcw85xCy92gDSwKtPag==
-  /@vue/shared/3.0.10:
+  /@vue/shared/3.0.11:
     dev: true
     resolution:
-      integrity: sha512-p8GJ+bGpEGiEHICwcCH/EtJnkZQllrOfm1J2J+Ep0ydMte25bPnArgrY/h2Tn1LKqqR3LXyQlOSYY6gJgiW2LQ==
+      integrity: sha512-b+zB8A2so8eCE0JsxjL24J7vdGl8rzPQ09hZNhystm+KqSbKcAej1A+Hbva1rCMmTTqA+hFnUSDc5kouEo0JzA==
   /@vue/shared/3.0.7:
     dev: false
     resolution:
@@ -10248,7 +10248,7 @@ packages:
     resolution:
       integrity: sha512-jcKpkthap6x63MB4TxwCyuIGkV0oYP/YRyuQU5UO0Yz/E/ZAu+653/uov+phdmO54n6BcvFRyyt0RRrWdN2mpw==
 specifiers:
-  '@aparajita/capacitor-secure-storage': ^1.0.6
+  '@aparajita/capacitor-secure-storage': ^1.0.7
   '@capacitor/android': ^2.4.7
   '@capacitor/cli': 2.4.7
   '@capacitor/core': 2.4.7
@@ -10264,7 +10264,7 @@ specifiers:
   '@vue/cli-plugin-router': ~4.5.12
   '@vue/cli-plugin-typescript': ~4.5.12
   '@vue/cli-service': ~4.5.12
-  '@vue/compiler-sfc': ^3.0.10
+  '@vue/compiler-sfc': ^3.0.11
   '@vue/eslint-config-typescript': ^7.0.0
   autoprefixer: ^9
   core-js: ^3.10.0
