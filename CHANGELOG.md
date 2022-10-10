@@ -1,6 +1,13 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [2.0.0](https://github.com/aparajita/capacitor-secure-storage-demo/compare/v1.0.8...v2.0.0) (2022-10-10)
+
+
+### Features
+
+* update for v2 and Capacitor 4 ([9b9a8c6](https://github.com/aparajita/capacitor-secure-storage-demo/commit/9b9a8c6b91142db3e808853c0842873ab1b139ce))
 
 ### [1.0.4](https://github.com/aparajita/ws-capacitor-secure-storage-demo/compare/v1.0.3...v1.0.4) (2020-12-04)
 
