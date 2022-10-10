@@ -1,7 +1,7 @@
 {
-  "name": "vuetest",
+  "name": "capacitor-biometric-auth-demo",
   "integrations": {
     "capacitor": {}
   },
-  "type": "vue"
+  "type": "custom"
 }

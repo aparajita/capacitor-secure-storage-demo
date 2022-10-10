@@ -1,16 +1,7 @@
 module.exports = {
-  purge: {
-    mode: 'layers',
-    layers: ['utilities'],
-    content: ['./src/**/*.html', './src/**/*.vue']
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: ['./src/**/*.{html,vue,ts}'],
   theme: {
-    extend: {
-      width: {
-        fit: 'fit-content'
-      }
-    }
+    extend: {}
   },
   variants: {
     extend: {}

@@ -1,0 +1,11 @@
+ignores: ["@capacitor/android", "@capacitor/ios"]
+
+ignore-patterns: ["node_modules", "dist", "ios", "android"]
+
+parsers:
+  '**/*.js': ['es7']
+  '**/*.json':
+    - json1
+    - json2
+  '**/*.ts': ['typescript']
+  '**/*.vue': ['vue']

@@ -5,7 +5,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="17">
+          <list size="18">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -16,13 +16,14 @@
             <item index="7" class="java.lang.String" itemvalue="ion-icon" />
             <item index="8" class="java.lang.String" itemvalue="ion-alert" />
             <item index="9" class="java.lang.String" itemvalue="ion-input" />
-            <item index="10" class="java.lang.String" itemvalue="ion-textarea" />
-            <item index="11" class="java.lang.String" itemvalue="ion-item" />
-            <item index="12" class="java.lang.String" itemvalue="ion-label" />
-            <item index="13" class="java.lang.String" itemvalue="ion-header" />
-            <item index="14" class="java.lang.String" itemvalue="ion-title" />
-            <item index="15" class="java.lang.String" itemvalue="ion-checkbox" />
-            <item index="16" class="java.lang.String" itemvalue="ion-select" />
+            <item index="10" class="java.lang.String" itemvalue="ion-item" />
+            <item index="11" class="java.lang.String" itemvalue="ion-label" />
+            <item index="12" class="java.lang.String" itemvalue="ion-list" />
+            <item index="13" class="java.lang.String" itemvalue="ion-list-header" />
+            <item index="14" class="java.lang.String" itemvalue="ion-select" />
+            <item index="15" class="java.lang.String" itemvalue="ion-content" />
+            <item index="16" class="java.lang.String" itemvalue="ion-checkbox" />
+            <item index="17" class="java.lang.String" itemvalue="ion-select-option" />
           </list>
         </value>
       </option>

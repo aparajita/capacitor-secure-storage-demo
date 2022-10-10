@@ -1,4 +1,6 @@
-platform :ios, '11.0'
+require_relative '../../node_modules/@capacitor/ios/scripts/pods_helpers'
+
+platform :ios, '13.0'
 use_frameworks!
 
 # workaround to avoid Xcode caching of Pods that requires
@@ -7,14 +9,21 @@ use_frameworks!
 install! 'cocoapods', :disable_input_output_paths => true
 
 def capacitor_pods
-  # Automatic Capacitor Pod dependencies, do not delete
-  pod 'Capacitor', :path => '../../node_modules/.pnpm/@capacitor/ios@2.4.7_@capacitor+core@2.4.7/node_modules/@capacitor/ios'
-  pod 'CapacitorCordova', :path => '../../node_modules/.pnpm/@capacitor/ios@2.4.7_@capacitor+core@2.4.7/node_modules/@capacitor/ios'
-  pod 'AparajitaCapacitorSecureStorage', :path => '../../node_modules/.pnpm/@aparajita/capacitor-secure-storage@1.0.6/node_modules/@aparajita/capacitor-secure-storage'
-  # Do not delete
+  pod 'Capacitor', :path => '../../node_modules/.pnpm/@capacitor+ios@4.3.0_@capacitor+core@4.3.0/node_modules/@capacitor/ios'
+  pod 'CapacitorCordova', :path => '../../node_modules/.pnpm/@capacitor+ios@4.3.0_@capacitor+core@4.3.0/node_modules/@capacitor/ios'
+  pod 'AparajitaCapacitorSecureStorage', :path => '../../node_modules/.pnpm/@aparajita+capacitor-secure-storage@2.0.0/node_modules/@aparajita/capacitor-secure-storage'
+  pod 'CapacitorApp', :path => '../../node_modules/.pnpm/@capacitor+app@4.0.1_@capacitor+core@4.3.0/node_modules/@capacitor/app'
+  pod 'CapacitorHaptics', :path => '../../node_modules/.pnpm/@capacitor+haptics@4.0.1_@capacitor+core@4.3.0/node_modules/@capacitor/haptics'
+  pod 'CapacitorKeyboard', :path => '../../node_modules/.pnpm/@capacitor+keyboard@4.0.1_@capacitor+core@4.3.0/node_modules/@capacitor/keyboard'
+  pod 'CapacitorStatusBar', :path => '../../node_modules/.pnpm/@capacitor+status-bar@4.0.1_@capacitor+core@4.3.0/node_modules/@capacitor/status-bar'
 end
 
 target 'App' do
   capacitor_pods
   # Add your Pods here
+end
+
+
+post_install do |installer|
+  assertDeploymentTarget(installer)
 end

@@ -1,5 +1,7 @@
 declare module '*.vue' {
-  import { defineComponent } from 'vue'
-  const component: ReturnType<typeof defineComponent>
+  import type { DefineComponent } from 'vue'
+
+  // eslint-disable-next-line
+  const component: DefineComponent<{}, {}, any>
   export default component
 }
