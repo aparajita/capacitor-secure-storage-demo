@@ -1,5 +1,5 @@
 <template>
-  <ion-page>
+  <ion-page class="w-full h-full">
     <ion-header>
       <ion-toolbar>
         <ion-title>Secure storage</ion-title>

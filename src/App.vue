@@ -1,5 +1,5 @@
 <template>
-  <ion-app>
+  <ion-app class="w-full h-full">
     <ion-router-outlet />
   </ion-app>
 </template>
