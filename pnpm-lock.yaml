@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@aparajita/capacitor-secure-storage': ^2.0.0
+  '@aparajita/capacitor-secure-storage': ^2.0.1
   '@aparajita/eslint-config-vue': ^1.0.6
   '@aparajita/prettier-config': ^1.0.0
   '@aparajita/tailwind-ionic': ^1.1.1
@@ -46,7 +46,7 @@ specifiers:
   vue-tsc: ~1.0.3
 
 dependencies:
-  '@aparajita/capacitor-secure-storage': 2.0.0
+  '@aparajita/capacitor-secure-storage': 2.0.1
   '@capacitor/android': 4.3.0_@capacitor+core@4.3.0
   '@capacitor/app': 4.0.1_@capacitor+core@4.3.0
   '@capacitor/core': 4.3.0
@@ -94,8 +94,8 @@ devDependencies:
 
 packages:
 
-  /@aparajita/capacitor-secure-storage/2.0.0:
-    resolution: {integrity: sha512-TDTi84TDaZy3TWl/m12xuOwQytByuieMoCl9ZXHNUNjBZku98fWCSiKtEthWWYY4zYB5ZHcy8SQrC1sslAE04A==}
+  /@aparajita/capacitor-secure-storage/2.0.1:
+    resolution: {integrity: sha512-XPEjgpZOLZFNker42geMDcK5Gk1JP4AC8mdaSkv9UnCz1ySPH0RW7UPMW7OCLtzRbsVNYR7iXjMVVqRlTgSpXA==}
     engines: {node: '>=16.15.1'}
     dependencies:
       '@capacitor/android': 4.3.0_@capacitor+core@4.3.0

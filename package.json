@@ -29,7 +29,7 @@
     "release": "commit-and-tag-version && git push --follow-tags"
   },
   "dependencies": {
-    "@aparajita/capacitor-secure-storage": "^2.0.0",
+    "@aparajita/capacitor-secure-storage": "^2.0.1",
     "@capacitor/android": "^4.3.0",
     "@capacitor/app": "^4.0.1",
     "@capacitor/core": "^4.3.0",
