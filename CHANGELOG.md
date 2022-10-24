@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [2.0.1](https://github.com/aparajita/capacitor-secure-storage-demo/compare/v2.0.0...v2.0.1) (2022-10-24)
+
+
+### Bug Fixes
+
+* empty app on Android ([1a21950](https://github.com/aparajita/capacitor-secure-storage-demo/commit/1a219505a1c2a2f22ac04907c93e4e3fbbac1e78))
+
+
+### Maintenance
+
+* remove unused file provider ([a490a7b](https://github.com/aparajita/capacitor-secure-storage-demo/commit/a490a7b34882481a6388b1988803e36558691845))
+* update deps ([7aa0da3](https://github.com/aparajita/capacitor-secure-storage-demo/commit/7aa0da3b6a331342af6f7af23376dc2621d84797))
+
 ## [2.0.0](https://github.com/aparajita/capacitor-secure-storage-demo/compare/v1.0.8...v2.0.0) (2022-10-10)
 
 
