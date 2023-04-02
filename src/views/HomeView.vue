@@ -11,28 +11,6 @@
         class="flex flex-col justify-start items-center w-full ion-padding-top pr-5"
       >
         <ion-item
-          v-if="Capacitor.getPlatform() === 'web'"
-          lines="inset"
-          class="w-full"
-        >
-          <ion-label class="flex-initial">Storage:</ion-label>
-          <ion-select
-            v-model="storageType"
-            interface="action-sheet"
-            :interface-options="{ header: 'Select storage type' }"
-            class="flex-initial max-w-full [--padding-start:0]"
-          >
-            <ion-select-option value="sessionStorage">
-              sessionStorage
-            </ion-select-option>
-
-            <ion-select-option value="localStorage">
-              localStorage
-            </ion-select-option>
-          </ion-select>
-        </ion-item>
-
-        <ion-item
           v-if="Capacitor.getPlatform() === 'ios'"
           lines="inset"
           class="w-full"
@@ -163,7 +141,7 @@ import type {
   DataType,
   StorageError
 } from '@aparajita/capacitor-secure-storage'
-import { SecureStorage, StorageType } from '@aparajita/capacitor-secure-storage'
+import { SecureStorage } from '@aparajita/capacitor-secure-storage'
 import { Capacitor } from '@capacitor/core'
 import type { InputChangeEventDetail, IonInputCustomEvent } from '@ionic/core'
 import {
@@ -176,13 +154,11 @@ import {
   IonItem,
   IonLabel,
   IonPage,
-  IonSelect,
-  IonSelectOption,
   IonText,
   IonTitle,
   IonToolbar
 } from '@ionic/vue'
-import { onBeforeMount, ref, watch } from 'vue'
+import { onBeforeMount, ref } from 'vue'
 
 /*
  * ref
@@ -190,51 +166,21 @@ import { onBeforeMount, ref, watch } from 'vue'
 const key = ref('')
 const data = ref('')
 const dataType = ref('')
-const storageType = ref(StorageType[StorageType.localStorage])
 const prefix = ref('')
 const iCloudSync = ref(false)
 const syncItem = ref(false)
 const useGlobalSync = ref(true)
 
 /*
- * watch
- */
-watch(storageType, () => {
-  onChangeStorageType()
-})
-
-/*
  * lifecycle
  */
 onBeforeMount(async () => {
   prefix.value = await SecureStorage.getKeyPrefix()
-
-  // This stuff pertains only to the web
-  if (Capacitor.getPlatform() === 'web') {
-    let encryptionKey = import.meta.env.VITE_SECURE_STORAGE_ENCRYPTION_KEY
-
-    if (!encryptionKey) {
-      console.warn(
-        'The encryption key should be set by the environment variable VITE_SECURE_STORAGE_ENCRYPTION_KEY or by calling setEncryptionKey()'
-      )
-      encryptionKey = 'This is just a placeholder'
-    }
-
-    await SecureStorage.setEncryptionKey(encryptionKey)
-  }
 })
 
 /*
  * methods
  */
-async function onChangeStorageType(): Promise<void> {
-  await SecureStorage.setStorageType(
-    storageType.value === 'sessionStorage'
-      ? StorageType.sessionStorage
-      : StorageType.localStorage
-  )
-}
-
 async function onSetSync(): Promise<void> {
   await SecureStorage.setSynchronize(iCloudSync.value)
 }
@@ -276,8 +222,14 @@ function synchronize(): boolean {
 async function onSet(): Promise<void> {
   try {
     const [value, type] = parseValue(data.value)
-    await SecureStorage.set(key.value, value, true, synchronize())
-    await showAlert(`Item (${type}) stored successfully.`)
+
+    if (value !== null) {
+      await SecureStorage.set(key.value, value, true, synchronize())
+      await showAlert(`Item (${type}) stored successfully.`)
+    } else {
+      await showAlert('null is not a valid DataType.')
+    }
+
     data.value = ''
     dataType.value = ''
   } catch (e) {
@@ -285,7 +237,7 @@ async function onSet(): Promise<void> {
   }
 }
 
-function parseValue(value: string): [DataType, string] {
+function parseValue(value: string): [DataType | null, string] {
   if (!value) {
     throw new SyntaxError('Empty data value')
   }
@@ -317,10 +269,6 @@ function getDataType(value: DataType): string {
   const type = typeof value
 
   if (type === 'object') {
-    if (value === null) {
-      return 'null'
-    }
-
     if (value instanceof Date) {
       return 'date'
     }
@@ -338,6 +286,12 @@ function getDataType(value: DataType): string {
 async function onGet(): Promise<void> {
   try {
     const value = await SecureStorage.get(key.value, true, synchronize())
+
+    if (value === null) {
+      data.value = ''
+      await showAlert(`There is no item with the key "${key.value}".`)
+      return
+    }
 
     if (value instanceof Date) {
       data.value = value.toISOString()
