@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.0](https://github.com/aparajita/capacitor-secure-storage-demo/compare/v2.1.0...v3.0.0) (2023-06-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* The app now requires Ionic 7 and Capacitor 5.
+
+### Features
+
+* upgrade to Ionic 7 & Capacitor 5 ([86cae6d](https://github.com/aparajita/capacitor-secure-storage-demo/commit/86cae6d98681360adbe33d6698ac721d0bacef55))
+
+
+### Maintenance
+
+* update dev environment ([8b12902](https://github.com/aparajita/capacitor-secure-storage-demo/commit/8b12902f7dc72fe7b39378643811ab09df108c45))
+
 ## [2.1.0](https://github.com/aparajita/capacitor-secure-storage-demo/compare/v2.0.2...v2.1.0) (2023-04-02)
 
 
