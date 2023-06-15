@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['@aparajita/vue']
+  extends: ['@aparajita/vue'],
 }

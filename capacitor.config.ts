@@ -10,9 +10,9 @@ const config: CapacitorConfig = {
   webDir: 'dist',
   plugins: {
     SplashScreen: {
-      launchAutoHide: false
-    }
-  }
+      launchAutoHide: false,
+    },
+  },
 }
 
 export default config

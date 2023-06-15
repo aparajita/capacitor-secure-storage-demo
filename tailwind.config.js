@@ -1,10 +1,10 @@
 module.exports = {
   content: ['./src/**/*.{html,vue,ts}'],
   theme: {
-    extend: {}
+    extend: {},
   },
   variants: {
-    extend: {}
+    extend: {},
   },
-  plugins: []
+  plugins: [],
 }

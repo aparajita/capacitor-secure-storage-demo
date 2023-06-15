@@ -5,13 +5,13 @@ import Home from '../views/HomeView.vue'
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: Home
-  }
+    component: Home,
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes
+  routes,
 })
 
 export default router
