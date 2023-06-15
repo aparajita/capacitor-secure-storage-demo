@@ -7,6 +7,9 @@ const config: CapacitorConfig = {
   appId: 'com.aparajita.capacitor.securestoragedemo',
   appName: 'Storage',
   loggingBehavior: 'debug',
+  server: {
+    androidScheme: 'http',
+  },
   webDir: 'dist',
   plugins: {
     SplashScreen: {

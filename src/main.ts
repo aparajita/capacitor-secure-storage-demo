@@ -16,7 +16,9 @@ import '@ionic/vue/css/typography.css'
 import './theme/variables.css'
 import './assets/css/styles.pcss'
 
-const config: Record<string, unknown> = {}
+const config: Record<string, unknown> = {
+  innerHTMLTemplatesEnabled: true,
+}
 
 if (Capacitor.getPlatform() === 'web') {
   config.mode = 'ios'

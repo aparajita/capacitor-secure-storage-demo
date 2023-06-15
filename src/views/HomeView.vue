@@ -18,8 +18,9 @@
           <ion-checkbox
             v-model="iCloudSync"
             @ion-change="onSetSync"
-          />
-          <ion-label>iCloud sync</ion-label>
+          >
+            Cloud sync
+          </ion-checkbox>
         </ion-item>
 
         <div class="flex items-end w-full">
@@ -27,9 +28,9 @@
             lines="inset"
             class="w-full"
           >
-            <ion-label>Prefix:</ion-label>
             <ion-input
               v-model="prefix"
+              label="Prefix:"
               type="text"
               class="flex-1"
             />
@@ -49,9 +50,9 @@
             lines="inset"
             class="flex-1"
           >
-            <ion-label>Key:</ion-label>
             <ion-input
               v-model="key"
+              label="Key:"
               type="text"
               required
             />
@@ -64,8 +65,9 @@
               v-model="syncItem"
               :indeterminate="useGlobalSync"
               @click="onSyncItemClick"
-            />
-            <ion-label>Sync</ion-label>
+            >
+              Sync
+            </ion-checkbox>
           </ion-item>
         </div>
 
@@ -73,11 +75,11 @@
           lines="inset"
           class="w-full"
         >
-          <ion-label>Data:</ion-label>
           <ion-input
             v-model="data"
+            label="Data:"
             required
-            @ion-change="onDataChanged"
+            @ion-input="onDataChanged"
           />
         </ion-item>
       </div>
@@ -139,7 +141,7 @@
 <script setup lang="ts">
 import type {
   DataType,
-  StorageError
+  StorageError,
 } from '@aparajita/capacitor-secure-storage'
 import { SecureStorage } from '@aparajita/capacitor-secure-storage'
 import { Capacitor } from '@capacitor/core'
@@ -150,13 +152,13 @@ import {
   IonCheckbox,
   IonContent,
   IonHeader,
+  IonicSafeString,
   IonInput,
   IonItem,
-  IonLabel,
   IonPage,
   IonText,
   IonTitle,
-  IonToolbar
+  IonToolbar,
 } from '@ionic/vue'
 import { onBeforeMount, ref } from 'vue'
 
@@ -396,8 +398,8 @@ async function showAlert(message: string): Promise<void> {
   const alert = await alertController.create({
     header: `The plugin says:`,
     subHeader: '',
-    message,
-    buttons: ['OK']
+    message: new IonicSafeString(message),
+    buttons: ['OK'],
   })
   await alert.present()
 }
