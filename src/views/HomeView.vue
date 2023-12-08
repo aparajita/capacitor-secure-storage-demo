@@ -139,11 +139,14 @@
 </template>
 
 <script setup lang="ts">
-import type {
-  DataType,
+import {
+  type DataType,
+  StorageErrorType,
+} from '@aparajita/capacitor-secure-storage'
+import {
+  SecureStorage,
   StorageError,
 } from '@aparajita/capacitor-secure-storage'
-import { SecureStorage } from '@aparajita/capacitor-secure-storage'
 import { Capacitor } from '@capacitor/core'
 import type { InputChangeEventDetail, IonInputCustomEvent } from '@ionic/core'
 import {
@@ -373,19 +376,14 @@ async function onShowKeys(): Promise<void> {
   await showAlert(msg)
 }
 
-function isStorageError(error: Error): error is StorageError {
-  // eslint-disable-next-line no-prototype-builtins
-  return error.hasOwnProperty('code')
-}
-
 async function showErrorAlert(error: unknown): Promise<void> {
   let message: string
 
   if (error instanceof Error) {
     message = error.message
 
-    if (isStorageError(error)) {
-      message += ` [${error.code}]`
+    if (error instanceof StorageError) {
+      message += ` [${StorageErrorType[error.code]}]`
     }
   } else {
     message = String(error)
