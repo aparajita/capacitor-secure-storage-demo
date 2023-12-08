@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.0.0](https://github.com/aparajita/capacitor-secure-storage-demo/compare/v3.0.0...v4.0.0) (2023-12-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* Demo requires @aparajita/capacitor-secure-storage v5.
+
+### Maintenance
+
+* update deps ([2fe4f30](https://github.com/aparajita/capacitor-secure-storage-demo/commit/2fe4f30418c051f351a1c7c149a8b5c9000bff73))
+* update error handling for plugin v5 ([c0f3d8f](https://github.com/aparajita/capacitor-secure-storage-demo/commit/c0f3d8fcadbb7656575554d85a71eb6b0a3060de))
+
 ## [3.0.0](https://github.com/aparajita/capacitor-secure-storage-demo/compare/v2.1.0...v3.0.0) (2023-06-15)
 
 
