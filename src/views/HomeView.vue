@@ -15,6 +15,41 @@
           lines="inset"
           class="w-full"
         >
+          <ion-label position="stacked">Access</ion-label>
+          <ion-select
+            v-model="access"
+            aria-label="Access"
+            placeholder="Select"
+          >
+            <ion-select-option :value="KeychainAccess.whenUnlocked">
+              whenUnlocked
+            </ion-select-option>
+            <ion-select-option
+              :value="KeychainAccess.whenUnlockedThisDeviceOnly"
+            >
+              whenUnlockedThisDeviceOnly
+            </ion-select-option>
+            <ion-select-option :value="KeychainAccess.afterFirstUnlock">
+              afterFirstUnlock
+            </ion-select-option>
+            <ion-select-option
+              :value="KeychainAccess.afterFirstUnlockThisDeviceOnly"
+            >
+              afterFirstUnlockThisDeviceOnly
+            </ion-select-option>
+            <ion-select-option
+              :value="KeychainAccess.whenPasscodeSetThisDeviceOnly"
+            >
+              whenPasscodeSetThisDeviceOnly
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item
+          v-if="Capacitor.getPlatform() === 'ios'"
+          lines="inset"
+          class="w-full"
+        >
           <ion-checkbox
             v-model="iCloudSync"
             @ion-change="onSetSync"
@@ -141,6 +176,7 @@
 <script setup lang="ts">
 import {
   type DataType,
+  KeychainAccess,
   StorageErrorType,
 } from '@aparajita/capacitor-secure-storage'
 import {
@@ -159,6 +195,8 @@ import {
   IonInput,
   IonItem,
   IonPage,
+  IonSelect,
+  IonSelectOption,
   IonText,
   IonTitle,
   IonToolbar,
@@ -175,6 +213,7 @@ const prefix = ref('')
 const iCloudSync = ref(false)
 const syncItem = ref(false)
 const useGlobalSync = ref(true)
+const access = ref(KeychainAccess.whenUnlocked)
 
 /*
  * lifecycle
@@ -229,7 +268,13 @@ async function onSet(): Promise<void> {
     const [value, type] = parseValue(data.value)
 
     if (value !== null) {
-      await SecureStorage.set(key.value, value, true, synchronize())
+      await SecureStorage.set(
+        key.value,
+        value,
+        true,
+        synchronize(),
+        access.value
+      )
       await showAlert(`Item (${type}) stored successfully.`)
     } else {
       await showAlert('null is not a valid DataType.')
