@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.1.0](https://github.com/aparajita/capacitor-secure-storage-demo/compare/v4.0.0...v4.1.0) (2024-02-28)
+
+
+### Features
+
+* add support for keychain access ([72e8d67](https://github.com/aparajita/capacitor-secure-storage-demo/commit/72e8d67430ef7e1c1901089ac5d926e9bcd3177b))
+
+
+### Maintenance
+
+* lint fixes ([6779b37](https://github.com/aparajita/capacitor-secure-storage-demo/commit/6779b371364a0300356aab13874cf0f78128e87d))
+
 ## [4.0.0](https://github.com/aparajita/capacitor-secure-storage-demo/compare/v3.0.0...v4.0.0) (2023-12-08)
 
 
