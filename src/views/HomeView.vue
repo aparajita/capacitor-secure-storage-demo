@@ -194,6 +194,7 @@ import {
   IonicSafeString,
   IonInput,
   IonItem,
+  IonLabel,
   IonPage,
   IonSelect,
   IonSelectOption,
