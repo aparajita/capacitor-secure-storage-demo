@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [5.0.0](https://github.com/aparajita/capacitor-secure-storage-demo/compare/v4.1.1...v5.0.0) (2024-04-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade to Capacitor 6, Ionic 8, plugin 6
+
+### Features
+
+* upgrade to Capacitor 6, Ionic 8, plugin 6 ([ebc4011](https://github.com/aparajita/capacitor-secure-storage-demo/commit/ebc4011959b7a7a586865b4eb393907565bcd713))
+
 ## [4.1.1](https://github.com/aparajita/capacitor-secure-storage-demo/compare/v4.1.0...v4.1.1) (2024-03-18)
 
 
