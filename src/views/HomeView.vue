@@ -1,5 +1,8 @@
 <template>
-  <ion-page class="w-full h-full">
+  <ion-page
+    id="main"
+    class="w-full h-full"
+  >
     <ion-header>
       <ion-toolbar>
         <ion-title>Secure storage</ion-title>

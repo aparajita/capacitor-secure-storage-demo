@@ -1,5 +1,5 @@
 PODS:
-  - AparajitaCapacitorSecureStorage (6.0.0):
+  - AparajitaCapacitorSecureStorage (6.0.1):
     - Capacitor
     - KeychainSwift (~> 21.0)
   - Capacitor (6.0.0):
@@ -16,7 +16,7 @@ PODS:
   - KeychainSwift (21.0.0)
 
 DEPENDENCIES:
-  - "AparajitaCapacitorSecureStorage (from `../../node_modules/.pnpm/@aparajita+capacitor-secure-storage@6.0.0/node_modules/@aparajita/capacitor-secure-storage`)"
+  - "AparajitaCapacitorSecureStorage (from `../../node_modules/.pnpm/@aparajita+capacitor-secure-storage@6.0.1/node_modules/@aparajita/capacitor-secure-storage`)"
   - "Capacitor (from `../../node_modules/.pnpm/@capacitor+ios@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/ios`)"
   - "CapacitorApp (from `../../node_modules/.pnpm/@capacitor+app@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/app`)"
   - "CapacitorCordova (from `../../node_modules/.pnpm/@capacitor+ios@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/ios`)"
@@ -30,7 +30,7 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   AparajitaCapacitorSecureStorage:
-    :path: "../../node_modules/.pnpm/@aparajita+capacitor-secure-storage@6.0.0/node_modules/@aparajita/capacitor-secure-storage"
+    :path: "../../node_modules/.pnpm/@aparajita+capacitor-secure-storage@6.0.1/node_modules/@aparajita/capacitor-secure-storage"
   Capacitor:
     :path: "../../node_modules/.pnpm/@capacitor+ios@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/ios"
   CapacitorApp:
@@ -45,7 +45,7 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/.pnpm/@capacitor+status-bar@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/status-bar"
 
 SPEC CHECKSUMS:
-  AparajitaCapacitorSecureStorage: b3e4c419898d0e6c0dc71de94cb8340b5d13f5f0
+  AparajitaCapacitorSecureStorage: 265982fd6a2686f9a0820f55c039623b2c4a34c1
   Capacitor: 559d073c4ca6c27f8e7002c807eea94c3ba435a9
   CapacitorApp: 9d53aec7101f7b030a950c5bdc4df8612576b279
   CapacitorCordova: 8c4bfdf69368512e85b1d8b724dd7546abeb30af
@@ -54,6 +54,6 @@ SPEC CHECKSUMS:
   CapacitorStatusBar: 2e4369f99166125435641b1908d05f561eaba6f6
   KeychainSwift: 4a71a45c802fd9e73906457c2dcbdbdc06c9419d
 
-PODFILE CHECKSUM: 43c4cce1c6a9c97e18b9efa9ab2c00e3450e8040
+PODFILE CHECKSUM: 296a79a3c66e5e124b6ea1c2359322ff91a542dc
 
 COCOAPODS: 1.15.2
