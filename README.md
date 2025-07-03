@@ -1,5 +1,10 @@
 # capacitor-secure-storage demo
 
+## Notice
+This demo app is no longer maintained as a separate repo. It is now part of the [capacitor-secure-storage plugin](https://github.com/aparajita/capacitor-secure-storage).
+
+---
+
 This Ionic/Vue app demonstrates all of the features of the [capacitor-secure-storage plugin](https://github.com/aparajita/capacitor-secure-storage/#readme).
 
 ## Installation
